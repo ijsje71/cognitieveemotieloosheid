@@ -14,6 +14,18 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
+  },
+  {
+    path: 'mindfulness',
+    loadChildren: () => import('./mindfulness/mindfulness.module').then( m => m.MindfulnessPageModule)
+  },
+  {
+    path: 'planner',
+    loadChildren: () => import('./planner/planner.module').then( m => m.PlannerPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   }
 ];
 
