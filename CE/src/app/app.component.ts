@@ -17,14 +17,24 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Profile',
+      url: '/profile',
+      icon: 'person'
     },
     {
       title: 'Mindfulness',
       url: '/mindfulness',
-      icon: 'person'
+      icon: 'rose'
+    },
+    {
+      title: 'Planner',
+      url: '/planner',
+      icon: 'calendar'
+    },
+    {
+      title: 'Brain Teasers',
+      url: '/planner',
+      icon: 'apps'
     }
   ];
 
