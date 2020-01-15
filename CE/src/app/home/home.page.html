@@ -1,29 +1,65 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Thuis 
+      Home 
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card class="welcome-card">
-    
+
+<!--- TODO List!--->
+  <ion-card class="welcome-card animate fadeInDown">
     <ion-card-header>
-      <ion-card-subtitle>Get Started</ion-card-subtitle>
-      <ion-card-title>Welcome to Ionic</ion-card-title>
+      <ion-card-title>To-Do List</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <p>
-        Now that your app has been created, you'll want to start building out features
-        and components. Check out some of the resources below for next steps.
+        <ion-item>
+          <ion-checkbox color="dark" checked slot="start"></ion-checkbox>
+          <ion-label>Item one</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-checkbox color="dark" slot="start"></ion-checkbox>
+          <ion-label>Item two</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-checkbox color="dark" disabled slot="start"></ion-checkbox>
+          <ion-label>Add item</ion-label>
+        </ion-item>
       </p>
     </ion-card-content>
   </ion-card>
 
+  <!--- Planner !--->
+  <ion-card class="welcome-card animate fadeInDown">
+    <ion-card-header>
+      <ion-card-title>Planner</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Content
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+    <!--- Progress !--->
+    <ion-card class="welcome-card animate fadeInDown">
+      <ion-card-header>
+        <ion-card-title>Progress</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          Content
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+
+  <!-- Obsolete 
   <ion-list lines="none">
     <ion-list-header>
       <ion-label>Resources</ion-label>
@@ -45,4 +81,6 @@
       <ion-label>Theme Your App</ion-label>
     </ion-item>
   </ion-list>
+
+  -->
 </ion-content>
