@@ -4,24 +4,28 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+      Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+
+  
+    <img src="/assets/icon/brain.png">
+  
+  
+  <ion-item>
+    <ion-label position="stacked">Username</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  
+  <ion-item>
+    <ion-label position="stacked">Password</ion-label>
+    <ion-input pattern='password'></ion-input>
+  </ion-item>
+
+  <ion-button expand="block">Login</ion-button>
+  <ion-button expand="block">Create Account</ion-button>
 </ion-content>
