@@ -1,9 +1,53 @@
+<style>
+  :root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+  }
+
+  .swiper-slide {
+    display: block;
+  }
+
+  ion-slide > h2 {
+    margin-top: 0.4rem;
+  }
+
+  ion-slide > img {
+    max-height: 80%;
+    max-width: 80%;
+    margin: 5px 0;
+  }
+</style>
+
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>Mindfulness</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen padding scroll-y="false">
+  <ion-slides pager="true">
 
+    <ion-slide>
+      <img src="assets/slide1.jpg"/>
+      <h2>Welcome to <b>Mindfulness</b></h2>
+      <p>During these assisted exercises, simply focus on your breath and try to get your attention back to the breath if you wonder off in your mind. <br><br><i>Slide through the tutorial to continue</i></p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/slide2.jpg"/>
+      <h2>Reflection</h2>
+      <p>These exercises will help you calm your mind, which can improve your concentration. You can see your results and progress after the exercises.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/slide3.jpg"/>
+      <h2>Ready?</h2>
+      <ion-button fill="clear">Continue<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+    </ion-slide>
+
+  </ion-slides>
 </ion-content>

@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'mindfulnessexercise',
+    loadChildren: () => import('./mindfulnessexercise/mindfulnessexercise.module').then( m => m.MindfulnessexercisePageModule)
   }
 ];
 
