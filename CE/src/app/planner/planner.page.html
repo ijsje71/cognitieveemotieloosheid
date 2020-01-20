@@ -1,9 +1,42 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>planner</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Planner</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-list-header>
+      To-Do List
+    </ion-list-header>
+    <ion-item *ngFor="let entry of toDoList">
+      <ion-label>{{entry.val}}</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <!-- Item Dividers in a List -->
+  <ion-list>
+    <ion-list-header>
+      Upcoming Appointments
+    </ion-list-header>
+    <ion-item-divider sticky=true *ngFor="let entry of plannerDates">
+      <ion-label>
+        {{entry.date}}
+      </ion-label>
+    </ion-item-divider>
+    <ion-item *ngFor="let entry of appointments">
+      <ion-label item-left>{{entry.time}}</ion-label>
+      <ion-label item-left>{{entry.val}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 
 </ion-content>
