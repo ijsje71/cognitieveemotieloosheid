@@ -1,8 +1,5 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
     <ion-title>
       Login
     </ion-title>
@@ -13,19 +10,16 @@
 
   
     <img src="/assets/icon/brain.png">
-  
-  
-  <ion-item>
-    <ion-label position="stacked">Username</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-  
-  
-  <ion-item>
-    <ion-label position="stacked">Password</ion-label>
-    <ion-input pattern='password'></ion-input>
-  </ion-item>
-
-  <ion-button expand="block">Login</ion-button>
+    <form (ngSubmit)="logForm()">
+      <ion-item>
+        <ion-label position="stacked">Username</ion-label>
+        <ion-input type="text" [(ngModel)]="username" name="username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input pattern='password'></ion-input>
+      </ion-item>
+  <ion-button expand="block" type="submit">Login</ion-button>
   <ion-button expand="block">Create Account</ion-button>
+  </form>
 </ion-content>
