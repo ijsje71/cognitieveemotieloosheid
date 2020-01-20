@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'mindfulnessexercise',
     loadChildren: () => import('./mindfulnessexercise/mindfulnessexercise.module').then( m => m.MindfulnessexercisePageModule)
+  },
+  {
+    path: 'mindfulnesscompleted',
+    loadChildren: () => import('./mindfulnesscompleted/mindfulnesscompleted.module').then( m => m.MindfulnesscompletedPageModule)
   }
 ];
 
