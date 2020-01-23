@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<!--- TODO List!--->
+  <ion-card class="welcome-card animated fadeInDown">
+    <ion-card-header>
+      <ion-card-title>To-Do List</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+    <ion-list-header>
+      To-Do List
+    </ion-list-header>
+    <ng-container *ngIf="toDoList.length != 0; else emptyArray">
+    <ion-item *ngFor="let entry of toDoList">
+      <ion-label>{{entry.val}}</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+    </ion-item>
+  </ng-container>
+  </ion-list>
+  <ng-template #emptyArray>You have no items in your To-do list!</ng-template>
+    </ion-card-content>
+  </ion-card>
+
+  <!--- Planner !--->
+  <ion-card class="welcome-card animated fadeInDown">
+    <ion-card-header>
+      <ion-card-title>Planner</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-list-header>
+          Upcoming Appointments
+        </ion-list-header>
+        <ng-container *ngIf="plannerDates.length != 0; else emptyArray">
+        <ion-item-divider sticky=true *ngFor="let entry of plannerDates">
+          <ion-label>
+            {{entry.date}}
+          </ion-label>
+        </ion-item-divider>
+      </ng-container>
+        <ion-item *ngFor="let entry of appointments">
+          <ion-label item-left>{{entry.time}}</ion-label>
+          <ion-label item-left>{{entry.val}}</ion-label>
+        </ion-item>
+      </ion-list>
+      <ng-template #emptyArray>You have not planned anything yet</ng-template>
+    </ion-card-content>
+  </ion-card>
+
+    <!--- Progress !--->
+    <ion-card (click)="navigateMindfulness()" class="welcome-card animated fadeInDown">
+      <ion-card-header>
+        <ion-card-title>Progress</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <img src="/assets/icon/jezusmathijs.png">
+      </ion-card-content>
+    </ion-card>
+</ion-content>
