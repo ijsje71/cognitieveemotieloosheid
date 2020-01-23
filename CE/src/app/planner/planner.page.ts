@@ -8,11 +8,22 @@ import { formatDate } from '@angular/common';
 })
 export class PlannerPage implements OnInit {
 
+
+  nextdate: Date;
   constructor() { }
+  public test;
 
+  public formatTest;
   ngOnInit() {
-
+  this.test = new Date()
+  this.test.setDate(this.test.getDate() +1);
+  console.log(this.test);
+    this.formatTest = formatDate(this.test, 'MMMM d, y', 'en');
+    console.log(this.formatTest);
   }
+
+
+  
 
   public toDoList = [
     { val: 'Clean House', isChecked: true },
@@ -21,10 +32,14 @@ export class PlannerPage implements OnInit {
   ];
 
   public plannerDate = formatDate(new Date(), 'MMMM d, y', 'en');
+  // public plannerDate2 = formatDate(this.test, 'MMMM d, y', 'en');
 
   public plannerDates = [
     {
-      date: formatDate(new Date(), 'MMMM d, y', 'en')
+      date: this.plannerDate
+    },
+    {
+      date: this.formatTest
     }
   ]
 
