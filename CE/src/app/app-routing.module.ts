@@ -34,7 +34,11 @@ const routes: Routes = [
   {
     path: 'mindfulnesscompleted',
     loadChildren: () => import('./mindfulnesscompleted/mindfulnesscompleted.module').then( m => m.MindfulnesscompletedPageModule)
+  },  {
+    path: 'home-mathijs',
+    loadChildren: () => import('./home-mathijs/home-mathijs.module').then( m => m.HomeMathijsPageModule)
   }
+
 ];
 
 @NgModule({
