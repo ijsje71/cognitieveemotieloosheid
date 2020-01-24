@@ -14,10 +14,11 @@ export class PlannerPage implements OnInit {
   public test;
 
   public formatTest;
+  
+  
   ngOnInit() {
   this.test = new Date()
   this.test.setDate(this.test.getDate() +1);
-  console.log(this.test);
     this.formatTest = formatDate(this.test, 'MMMM d, y', 'en');
     console.log(this.formatTest);
   }
@@ -37,9 +38,6 @@ export class PlannerPage implements OnInit {
   public plannerDates = [
     {
       date: this.plannerDate
-    },
-    {
-      date: this.formatTest
     }
   ]
 
